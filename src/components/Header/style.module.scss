@@ -1,0 +1,11 @@
+.Header {
+    background: #F8F9FA;
+    
+    & > div{
+        width: 100%;
+        padding: 1rem;
+        max-width: 75rem;
+        margin: 0 auto;
+        gap: 2rem;
+    }
+}
