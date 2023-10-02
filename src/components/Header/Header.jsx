@@ -3,7 +3,7 @@ import styles from "./style.module.scss";
 
 export const Header = () => {
     return (
-        <header className={styles.Header}>
+        <header className={styles.header}>
             <div >
                 <img src={Logo} alt="logo" />
             </div>

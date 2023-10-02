@@ -8,17 +8,15 @@ export const Form = () => {
 
     const submit = (e) => {
         e.preventDefault();
-        // console.log({description, value, typeValue});
+        console.log({description, value, typeValue});
         setDescription("");
         setValue("");
         setTypeValue("");
 
     }
 
-
-
     return(
-        <form onSubmit={submit}>
+        <form onSubmit={submit} className="containerForm">
             <div>
                 <label>Descrição</label>
                 <input type="text" placeholder="Digite aqui sua descrição" value={description} onChange={(e) => setDescription(e.target.value)}/>
