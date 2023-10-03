@@ -1,0 +1,27 @@
+.btn {
+    display: inline-flex;
+    height: 3rem;
+    padding: 0.8125rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    border: 2px solid var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-grey-1);
+
+    font-family: var(--fonte-primary);
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: 0.4s;
+
+    &:hover{
+        border-radius: 8px;
+        border: 2px solid var(--color-primary-2);
+        background: var(--color-primary-2);
+        color: var(--color-grey-1);
+    }
+}

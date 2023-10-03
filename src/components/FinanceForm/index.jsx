@@ -1,38 +1,46 @@
 import { useState } from "react";
+import { Input } from "../Imput/index.jsx";
 
-
-export const Form = () => {
+export const FinanceForm = () => {
     const [description, setDescription] = useState("");
     const [value, setValue] = useState("");
     const [typeValue, setTypeValue] = useState("");
 
+    console.log(description);
+    console.log(value);
+    console.log(typeValue);
+    
     const submit = (e) => {
         e.preventDefault();
         console.log({description, value, typeValue});
+
         setDescription("");
         setValue("");
         setTypeValue("");
-
-    }
+    };
 
     return(
-        <form onSubmit={submit} className="containerForm">
-            <div>
+        <div>
+
+            <form onSubmit={submit} className="containerForm">
+                
                 <label>Descrição</label>
                 <input type="text" placeholder="Digite aqui sua descrição" value={description} onChange={(e) => setDescription(e.target.value)}/>
-            </div>
+                <p>Ex: Compra de roupas</p>
+                
 
-            <div>
+                
                 <label>Valor R$</label>
                 <input type="text" placeholder="1" value={value} onChange={(e) => setValue(e.target.value)}/>
-            </div>
+                
 
-            <div>
+                
                 <label>Tipo de valor</label>
                 <input type="text" placeholder="Entrada" value={typeValue} onChange={(e) => setTypeValue(e.target.value)}/>
-            </div>
+            
 
-            <button type="submit">Inserir valor</button>
-        </form>
+                <button className="btn" type="submit">Inserir valor</button>
+            </form>
+        </div>
     );
 };
