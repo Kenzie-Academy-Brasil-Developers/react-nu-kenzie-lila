@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input } from "../Imput/index.jsx";
+// import { Input } from "../Imput/index.jsx";
 
 export const FinanceForm = () => {
     const [description, setDescription] = useState("");
