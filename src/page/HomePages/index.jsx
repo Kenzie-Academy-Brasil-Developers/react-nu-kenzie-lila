@@ -1,11 +1,18 @@
+import React, { useState } from 'react';
 import { Header } from "../../components/Header/index.jsx";
-import  { FinanceForm } from "../../components/FinanceForm/index.jsx";
+import { TodoForm } from "../../components/TodoForm/index.jsx";
+import { TodoList } from "../../components/TodoList/index.jsx";
+
+
 
 export const HomePage = () => {
+
+    const [todoList, setTodoList] = useState([]);
     return (     
         <main>
             <Header/>
-            <FinanceForm/>
+            <TodoForm setTodoList={setTodoList} todoList={todoList}/>
+            <TodoList todoList={todoList}/>
         </main>
     );
 };

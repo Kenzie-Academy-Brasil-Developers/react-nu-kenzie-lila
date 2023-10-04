@@ -1,4 +1,4 @@
-export const Input = (Label, placeholder, type, id, value, setValue) => {
+export const Input = (Label, placeholder, type, id, typeNumber, setValue) => {
     return 
         <div>
             <label htmlFor={id}>{Label}</label>
@@ -7,7 +7,7 @@ export const Input = (Label, placeholder, type, id, value, setValue) => {
                 id={id} 
                 type={type} 
                 placeholder={placeholder} 
-                value={value}
+                typeNumber={value}
                 onChange={(e) => setValue(e.target.value)}
             />
         </div> 
