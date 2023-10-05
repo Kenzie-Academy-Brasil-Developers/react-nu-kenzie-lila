@@ -1,42 +1,39 @@
 import { useState } from "react";
 import { v4 as uuidv4} from "uuid";
+import styles from "./style.module.scss";
+import { InputDescription } from "./InputDescrition";
+import { InputTypeNumber } from "./InputTypeNumber";
+import { SelectTypeValue } from "./SelectTypeValue/input";
 
-export const TodoForm = ({todoList,setTodoList}) => {
+export const TodoForm = ({addNote,setListNotes}) => {
     const [description, setDescription] = useState("");
-    const [typeNumber, setTypeNumber] = useState("");
-    const [typeValue, setTypeValue] = useState("");
+    const [typeNumber, setTypeNumber] = useState(0);
+    const [typeValue, setTypeValue] = useState("entrada");
     
     const addTodo = () => {
         const newTodo = {id:uuidv4(), description, typeNumber, typeValue};
         
-        setTodoList((todoList) => [...todoList, newTodo]);
+        setListNotes((listNotes) => [...listNotes, newTodo]);
     }
     
     const submit = (e) => {
         e.preventDefault();
-        addTodo();
+        addNote(description, typeNumber, typeValue);
         setDescription("");
         setTypeNumber("");
-        setTypeValue("");
+        setTypeValue("entrada");
     };
-
 
     return(
         <div>
-            <form onSubmit={submit} className="containerForm">
- 
-                <label className="placehober">Descrição</label>
-                <input className="headline" type="text" placeholder="Digite aqui sua descrição" value={description} onChange={(e) => setDescription(e.target.value)}/>
-                <p className="body">Ex: Compra de roupas</p>
-                
-                
-                <label>Valor R$</label>
-                <input type="number" placeholder="1" value={typeNumber} onChange={(e) => setTypeNumber(e.target.value)}/>
+            <form onSubmit={submit} className={styles.containerForm}>
+      
+                <InputDescription type="text" placeholder="Digite aqui sua descrição" value={description} label="Descrição" span="Ex: Compra de roupas" setDescription={setDescription} required={true}/>
 
-                
-                <label>Tipo de valor</label>
-                <select placeholder="Entrada" value={typeValue} onChange={(e) => setTypeValue(e.target.value)}/>
-            
+                <InputTypeNumber type="number" label="Valor(R$)" placeholder="0" value={typeNumber}  setTypeNumber={setTypeNumber} required={true}/>
+
+                <SelectTypeValue label="Tipo de valor" value={typeValue} setTypeValue={setTypeValue}
+                option/>
 
                 <button className="btnInsert" type="submit">Inserir valor</button>
             </form>

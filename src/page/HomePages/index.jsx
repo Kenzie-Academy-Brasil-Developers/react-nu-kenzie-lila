@@ -5,14 +5,15 @@ import { TodoList } from "../../components/TodoList/index.jsx";
 
 
 
-export const HomePage = () => {
+export const HomePage = ({listNotes, addNote, setListNotes}) => {
 
-    const [todoList, setTodoList] = useState([]);
-    return (     
-        <main>
-            <Header/>
-            <TodoForm setTodoList={setTodoList} todoList={todoList}/>
-            <TodoList todoList={todoList}/>
-        </main>
+    return (  
+        <>
+            <Header/>   
+            <main>
+                <TodoForm addNote={addNote} listNotes={listNotes}/>
+                <TodoList listNotes={listNotes} setListNotes={setListNotes}/>
+            </main>
+        </>
     );
 };

@@ -1,0 +1,33 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: var(--font-secondary);
+
+    label {
+        display: flex;
+        color: #212529;
+        
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.375rem; 
+    }
+    
+    input {
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        width: 19.625rem;
+        height: 3.3rem;
+        padding: 0rem 1rem;
+        align-items: center;
+        gap: 0.625rem;
+        flex-shrink: 0;
+
+        border-radius: 0.5rem;
+        border: 0.125rem solid #F8F9FA;
+        background: #F8F9FA;
+    }
+    
+}
