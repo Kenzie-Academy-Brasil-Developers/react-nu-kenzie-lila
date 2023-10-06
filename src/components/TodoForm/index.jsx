@@ -8,7 +8,7 @@ import { TotalValue } from "./TodoValue";
 
 export const TodoForm = ({addNote, setListNotes, listNotes}) => {
     const [description, setDescription] = useState("");
-    const [typeNumber, setTypeNumber] = useState("");
+    const [typeNumber, setTypeNumber] = useState(0);
     const [typeValue, setTypeValue] = useState("entrada");
     
     const addTodo = () => {
