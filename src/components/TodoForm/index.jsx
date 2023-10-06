@@ -4,10 +4,11 @@ import styles from "./style.module.scss";
 import { InputDescription } from "./InputDescrition";
 import { InputTypeNumber } from "./InputTypeNumber";
 import { SelectTypeValue } from "./SelectTypeValue/input";
+import { TotalValue } from "./TodoValue";
 
-export const TodoForm = ({addNote,setListNotes}) => {
+export const TodoForm = ({addNote, setListNotes, listNotes}) => {
     const [description, setDescription] = useState("");
-    const [typeNumber, setTypeNumber] = useState(0);
+    const [typeNumber, setTypeNumber] = useState("");
     const [typeValue, setTypeValue] = useState("entrada");
     
     const addTodo = () => {
@@ -37,6 +38,7 @@ export const TodoForm = ({addNote,setListNotes}) => {
 
                 <button className="btnInsert" type="submit">Inserir valor</button>
             </form>
+            <TotalValue listNotes={listNotes}/>
         </div>
     );
 };

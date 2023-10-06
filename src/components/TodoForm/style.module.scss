@@ -1,6 +1,6 @@
 .containerForm {
     width: 355px;
-    height: 434px;
+    height: 470px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,16 @@
     background: #FFF;
     
     padding: rem;
-    margin: 1.3125rem;
+    margin-left: 2.610rem;
+
+    // box {
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 0.5rem;
+    //     font-family: var(--fonte-primary);
+    //     padding: rem;
+    //     margin: 1.3125rem; 
+    // }
 
 }
 

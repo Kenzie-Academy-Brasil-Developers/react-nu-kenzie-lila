@@ -1,12 +1,13 @@
 import { TodoCard } from "./TodoCard";
+import styles from "./style.module.scss";
 
 export const TodoList = ({listNotes, setListNotes}) => {
-    
+
 
     return (
         <div>
-            <h2 className="title two">Resumo financeiro</h2>
-            <ul>
+            <h2 className={styles.description}>Resumo financeiro</h2>
+            <ul className={styles.boxCard2}>
                 {listNotes.map((element) => (
                 <TodoCard
                 key={element.id}
