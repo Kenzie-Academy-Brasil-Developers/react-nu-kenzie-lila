@@ -5,8 +5,8 @@ export const SelectTypeValue = ({label, value, setTypeValue, option}) => {
         <div className={style.box}>
             <label>{label}</label>
             <select value={value} onChange={(e) => setTypeValue(e.target.value)} >
-                <option value="entrada">Entrada</option>
-                <option value="saida">Saída</option> 
+                <option value="Entrada">Entrada</option>
+                <option value="Saída">Saída</option> 
             </select>      
         </div>
     )

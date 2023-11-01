@@ -1,7 +1,14 @@
 .pages{
+    max-width: 440px;
     display: flex;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     gap: 100px;
+  
+    // border: 2px solid red;
+    background: #FFF;
 }
+
+
+

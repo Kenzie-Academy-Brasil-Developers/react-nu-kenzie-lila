@@ -3,7 +3,6 @@ import styles from "./style.module.scss";
 
 export const TodoList = ({listNotes, setListNotes}) => {
 
-
     return (
         <div>
             <h2 className={styles.description}>Resumo financeiro</h2>

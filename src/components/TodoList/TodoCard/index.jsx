@@ -8,14 +8,17 @@ export const TodoCard = ({element, listNotes, setListNotes}) => {
     return (
         <>
             <li className={styles.container}>
-                <h3 className={styles.description}>{element.description}</h3>
-                <p className={styles.typeNumber}>{element.typeNumber}</p>
-                <p className={styles.valueNumber}>{element.typeValue}</p>
-                <button className="btnDelete" onClick={
-                    () => deletTodo(element.id)
-                }>Excluir</button>
+                <div className={styles.box1}>
+                    <h3 className={styles.description}>{element.description}</h3>
+                    <p className={styles.valueNumber}>{element.typeValue}</p>
+                </div>
+                <div className={styles.box2}>
+                    <p className={styles.typeNumber}>R${element.typeNumber}</p>
+                    <button className={styles.bntDelete} onClick={
+                        () => deletTodo(element.id)
+                    }>Excluir</button>
+                </div>
             </li>
-            {/* <span>{span}</span> */}
         </>
     )
 }

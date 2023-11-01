@@ -1,24 +1,23 @@
 .description {
+    max-width: 560px;
+    padding: 18px;
     font-family: 'Nunito', sans-serif;
     margin: 0 auto;
     margin-bottom: 25px;
 }
 
 .boxCard2 {
+    padding: 14px;
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    // gap: 30px;
 
     border-radius: 0.25rem;
-    background: #F8F9FA;
     width: 560px;
     max-width: 600px;
     margin: 0 auto;
     width: 100%;
-    // padding: 16px 20px;
 
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
