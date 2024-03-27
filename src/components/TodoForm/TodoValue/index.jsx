@@ -12,7 +12,7 @@ export const TotalValue = ({listNotes}) => {
 
     return (
         <div className={styles.container}>
-            <h2>Valor Total: {totalChar}</h2>
+            <h2>Valor Total: {totalChar.toFixed(2)}</h2>
             <span>O valor se refere ao saldo</span>
         </div>
     );
