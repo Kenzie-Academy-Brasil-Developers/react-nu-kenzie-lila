@@ -3,10 +3,13 @@ import styles from "../TodoValue/style.module.scss";
 export const TotalValue = ({listNotes}) => {
 
     const totalChar = listNotes.reduce((prevValue, number) => {
+        const numberDecimal = parseFloat(number.typeNumber.replace(",", "."));
         if(number.typeValue == "entrada"){
-            return prevValue + parseFloat(number.typeNumber);
+            // return prevValue + parseFloat(number.typeNumber);
+            return prevValue + numberDecimal;
         } else{
-            return prevValue - parseFloat(number.typeNumber);
+            // return prevValue - parseFloat(number.typeNumber);
+            return prevValue - numberDecimal;
         }
     }, 0);
 
