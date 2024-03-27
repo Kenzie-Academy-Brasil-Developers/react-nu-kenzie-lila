@@ -4,11 +4,13 @@ export const TotalValue = ({listNotes}) => {
 
     const totalChar = listNotes.reduce((prevValue, number) => {
         if(number.typeValue == "entrada"){
-            return prevValue + parseFloat(number.typeNumber)
+            return prevValue + parseFloat(number.typeNumber);
         } else{
-            return prevValue - parseFloat(number.typeNumber)
+            return prevValue - parseFloat(number.typeNumber);
         }
     }, 0);
+
+    const totalFormatted = totalChar.toFixed(2);
 
     return (
         <div className={styles.container}>
