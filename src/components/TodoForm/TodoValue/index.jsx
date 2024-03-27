@@ -4,15 +4,15 @@ export const TotalValue = ({listNotes}) => {
 
     const totalChar = listNotes.reduce((prevValue, number) => {
         if(number.typeValue == "entrada"){
-            return prevValue + Number(number.typeNumber)
+            return prevValue + parseFloat(number.typeNumber)
         } else{
-            return prevValue - Number(number.typeNumber)
+            return prevValue - parseFloat(number.typeNumber)
         }
     }, 0);
 
     return (
         <div className={styles.container}>
-            <h2>Valor Total: {totalChar.toFixed(3.5)}</h2>
+            <h2>Valor Total: {totalFormatted}</h2>
             <span>O valor se refere ao saldo</span>
         </div>
     );
