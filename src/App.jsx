@@ -1,8 +1,7 @@
-import { HomePage } from "./page/HomePages/index.jsx";
+import { HomePage } from "./pages/HomePages/index.jsx";
 import "./styles/index.scss";
 import { useState } from "react";
 import { v4 as uuidv4} from "uuid";
-
 
 function App() {
   const[listNotes, setListNotes] = useState([])
